@@ -3,8 +3,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 // import Link from "@mui/material/Link";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
@@ -13,6 +11,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import axios from "axios";
+import { Alert } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 function Copyright(props) {
   return (
     <Typography
@@ -34,27 +36,59 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
+  const [errorMessage, setErrorMessage] = React.useState(false);
+
   const [avatar, setAvatar] = React.useState("");
-  //   console.log(avatar);
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-      name: data.get("firstName") + " " + data.get("lastName"),
-      theavatar: data.get("avatar"),
-    });
+    //post img to imgbb
+
+    if (avatar) {
+      let formData = new FormData();
+      formData.append("image", avatar);
+      formData.append("key", `c8818fe821c0aee81ebf0b77344f0e2b`);
+      axios.post("img link", formData).then((res) => {
+        const imgURL = res.data.data.url;
+        axios
+          .post("heroku link", {
+            fullname:
+              event.target.firstName.value + " " + event.target.lastName.value,
+            email: event.target.email.value,
+            password: event.target.password.value,
+            avatar: imgURL ? imgURL : "",
+          })
+          .then((res) => {
+            alert("Sign up successfully! Now you can sign in");
+            navigate("/sign-in");
+          });
+      });
+    } else {
+      axios
+        .post("heroku link", {
+          fullname:
+            event.target.firstName.value + " " + event.target.lastName.value,
+          email: event.target.email.value,
+          password: event.target.password.value,
+          avatar: "",
+        })
+        .then((res) => {
+          alert("Sign up successfully! Now you can sign in");
+          navigate("/sign-in");
+        })
+        .catch((err) => {
+          setErrorMessage(err?.response?.data?.message);
+        });
+    }
   };
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <Header /> */}
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 6,
+            marginTop: 3,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -64,19 +98,9 @@ export default function SignUp() {
             sx={{
               m: 1,
               bgcolor: "secondary.main",
-              //  width: 60, height: 60
             }}
           >
             <LockOutlinedIcon />
-            {/* <Link to="/">
-              <img
-                style={{
-                  width: "63px",
-                }}
-                src={logo}
-                alt=""
-              />
-            </Link> */}
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up
@@ -130,17 +154,6 @@ export default function SignUp() {
                   autoComplete="new-password"
                 />
               </Grid>
-              {/* <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="avatar"
-                  //   label="Avatar"
-                  type="file"
-                  id="avatar"
-                  autoComplete=""
-                />
-              </Grid> */}
               <Grid item xs={12}>
                 <Typography
                   sx={{
@@ -156,7 +169,13 @@ export default function SignUp() {
                     alignItems: "center",
                   }}
                 >
-                  <Button variant="contained" component="label">
+                  <Button
+                    variant="contained"
+                    component="label"
+                    sx={{
+                      width: 1 / 3,
+                    }}
+                  >
                     Upload File
                     <TextField
                       type="file"
@@ -176,14 +195,6 @@ export default function SignUp() {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
-                  }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid>
             </Grid>
             <Button
               type="submit"
@@ -193,6 +204,7 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
+            {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link
@@ -209,7 +221,7 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        <Copyright sx={{ mt: 2 }} />
       </Container>
     </ThemeProvider>
   );

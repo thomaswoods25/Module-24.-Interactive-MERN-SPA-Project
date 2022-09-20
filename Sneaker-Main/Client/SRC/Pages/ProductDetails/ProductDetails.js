@@ -1,12 +1,79 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../../common/Footer";
 import Header from "../../common/Header";
-import image1 from "../../asseets/images/1.jpg";
 import avatar2 from "../../asseets/images/avatar2.jpg";
 import Textarea from "@mui/joy/Textarea";
-import { Button } from "@mui/material";
+import { Button, Dialog, DialogTitle, Typography } from "@mui/material";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { green, blue } from "@mui/material/colors";
 
 const ProductDetails = () => {
+  const { productId } = useParams();
+  const [comment, setComment] = React.useState("");
+
+  const [allProducts, setAllProducts] = React.useState([]);
+  const [open, setOpen] = React.useState(false);
+  const [comments, setComments] = React.useState([]);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  useEffect(() => {
+    fetch(`heroku link`)
+      .then((res) => res.json())
+      .then((json) => {
+        setAllProducts(json?.allProducts);
+      });
+  }, []);
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  // const token = JSON.parse(localStorage.getItem("token"));
+  const token = localStorage.getItem("token");
+
+  const product = allProducts?.find((pd) => pd?._id === productId);
+
+  const handleComment = () => {
+    // send comment to database
+    axios
+      .post(
+        "heroku comment link",
+        {
+          comment,
+          productId,
+          name: userInfo?.fullname,
+          userImage: userInfo?.avatar ? userInfo?.avatar : "",
+          email: userInfo?.email,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then((res) => {
+        setOpen(true);
+        setComment("");
+        axios
+          .get(
+            `heroku product link`
+          )
+          .then((res) => {
+            setComments(res.data?.data);
+          });
+      });
+  };
+
+  useEffect(() => {
+    // get all the comments from database for specific product
+    axios
+      .get(
+        `heroku product link`
+      )
+      .then((res) => {
+        setComments(res.data?.data);
+      });
+  }, [productId]);
+
   return (
     <div>
       <Header />
@@ -14,155 +81,151 @@ const ProductDetails = () => {
         <h1>Welcome Sneakers Seekers</h1>
       </header>
       <main className="product-details-main">
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <img
             style={{
-              width: "100%",
+              width: "70%",
               borderRadius: "10px",
             }}
-            src={image1}
+            src={product?.thumbnail}
             alt=""
           />
         </div>
         <div>
-          <h1>This is the shoe’s title for this page</h1>
+          <h1>{product?.shoeName}</h1>
           <p>
-            Price :{" "}
+            Retail Price :{" "}
             <span
               style={{
                 color: "#CD1F1F",
               }}
             >
-              $500.87
+              ${product?.retailPrice}
             </span>{" "}
           </p>
-          <p>Brand : Adidas</p>
-          <p>
-            Descriptions: Utilizing a sleek monochrome finish, the adidas Yeezy
-            Foam Runner ‘Onyx’ is an understated colorway for a futuristic
-            slip-on. A molded one-piece upper showcases open vents for
-            breathability, while the injected EVA foam is lightweight and is
-            secured by a unique traction pattern for grip.
-          </p>
+          <p>Brand : {product?.brand}</p>
+          {product?.description && <p>Descriptions :{product?.description}</p>}
+          {(product?.description === "" || undefined || null || "\n") && (
+            <p>
+              Descriptions : A monochromatic Onyx hue envelops the latest Yeezy
+              Boost 350 V2, the lifestyle runner from adidas and Kanye West. The
+              upper features a dark black Primeknit weave along with rope laces,
+              while a post-dyed monofilament side stripe can be found in a
+              lighter black shade. A full-length Boost unit is encapsulated in a
+              semi-translucent ribbed TPU midsole, while a black rubber outsole
+              rounds out the look.
+            </p>
+          )}
           <div
             style={{
               marginTop: "20px",
             }}
           >
-            <p
-              style={{
-                color: "#3A3A3A",
+            <Typography
+              sx={{
+                color: blue[400],
+                mb: 2,
               }}
             >
-              Comments (2)
-            </p>
-            <div
-              style={{
-                display: "flex",
-                gap: "30px",
-              }}
-            >
+              Comments ({comments?.length})
+            </Typography>
+            {comments?.map((comment) => (
               <div
                 style={{
-                  width: "15%",
-                  textAlign: "center",
+                  display: "flex",
+                  gap: "30px",
                 }}
               >
-                <img
+                <div
                   style={{
-                    width: "70px",
-                    height: "70px",
-                    borderRadius: "50%",
-                    objectFit: "fill",
-                  }}
-                  src={avatar2}
-                  alt=""
-                />
-                <p
-                  style={{
-                    marginTop: "0px",
+                    width: "15%",
+                    textAlign: "center",
                   }}
                 >
-                  John Doe
-                </p>
-              </div>
-              <p
-                style={{
-                  width: "85%",
-                }}
-              >
-                This is a comment for testing.For example, if you are designing
-                a brand new website for someone, most times you will have to
-                make sure the prototype looks finished by inserting text.
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                gap: "30px",
-              }}
-            >
-              <div
-                style={{
-                  width: "15%",
-                  textAlign: "center",
-                }}
-              >
-                <img
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                    borderRadius: "50%",
-                    objectFit: "fill",
-                  }}
-                  src={avatar2}
-                  alt=""
-                />
+                  <img
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                      borderRadius: "50%",
+                      objectFit: "fill",
+                    }}
+                    src={comment?.userImage ? comment?.userImage : avatar2}
+                    alt=""
+                  />
+                  <p
+                    style={{
+                      marginTop: "0px",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {comment?.name}
+                  </p>
+                </div>
                 <p
                   style={{
-                    marginTop: "0px",
+                    width: "85%",
                   }}
                 >
-                  Martin Guptil
+                  {comment?.comment}
                 </p>
               </div>
-              <p
-                style={{
-                  width: "85%",
-                }}
-              >
-                This is a comment for testing.For example, if you are designing
-                a brand new website for someone, most times you will have to
-                make sure the prototype looks finished by inserting text.
+            ))}
+            {comments?.length === 0 && (
+              <p style={{ color: "#3A3A3A", margin: "10px 0" }}>
+                No comments yet. Be the first one!
               </p>
-            </div>
+            )}
           </div>
           {/*  */}
-          <div
-            style={{
-              margin: "20px 0",
-            }}
-          >
-            <p>Add a comment</p>
-            <Textarea
-              minRows={4}
-              variant="solid"
-              sx={{
-                border: "1px solid lightgray",
-              }}
-            />
-            <Button
-              variant="contained"
-              sx={{
-                marginTop: "15px",
-              }}
-            >
-              Submit
-            </Button>
-          </div>
+          {token ? (
+            <div>
+              <p
+                style={{
+                  color: green[400],
+                }}
+              >
+                Add a comment
+              </p>
+              <Textarea
+                onChange={(e) => setComment(e.target.value)}
+                value={comment}
+                minRows={4}
+                variant="solid"
+                sx={{
+                  border: "1px solid lightgray",
+                }}
+              />
+              <Button
+                onClick={handleComment}
+                variant="contained"
+                sx={{
+                  margin: "15px 0",
+                }}
+              >
+                Submit
+              </Button>
+            </div>
+          ) : (
+            <p>Login To Add a Comment</p>
+          )}
         </div>
       </main>
       <Footer />
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Succesffully Comment Added!"}
+        </DialogTitle>
+      </Dialog>
     </div>
   );
 };

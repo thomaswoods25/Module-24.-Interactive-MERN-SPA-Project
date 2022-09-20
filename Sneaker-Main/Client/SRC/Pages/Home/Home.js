@@ -2,38 +2,41 @@ import React from "react";
 import Footer from "../../common/Footer";
 import Header from "../../common/Header";
 import "../../asseets/styles/main.css";
-import image1 from "../../asseets/images/1.jpg";
-import image8 from "../../asseets/images/8.jpg";
-import image9 from "../../asseets/images/9.jpg";
-import image4 from "../../asseets/images/4.jpg";
-import image5 from "../../asseets/images/5.jpg";
-import image10 from "../../asseets/images/10.jpg";
+
 import featured from "../../asseets/images/featured.jpg";
-import { Button, Box, TextField } from "@mui/material";
+import { Button, Box, TextField, Modal, Typography } from "@mui/material";
 import Textarea from "@mui/joy/Textarea";
-
-const imgData = [
-  {
-    img: image1,
-  },
-  {
-    img: image8,
-  },
-  {
-    img: image9,
-  },
-  {
-    img: image4,
-  },
-  {
-    img: image5,
-  },
-  {
-    img: image10,
-  },
-];
-
+import Products from "../../components/Products";
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "1px solid lightgray",
+  boxShadow: 24,
+  p: 4,
+  borderRadius: "10px",
+};
 const Home = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const name = data.get("name");
+    const email = data.get("email");
+    const subject = data.get("subject");
+    const message = data.get("message");
+    if (name && email && subject && message) {
+      setOpen(true);
+      e.target.reset();
+    } else {
+      alert("Please fill all the fields");
+    }
+  };
+  const handleClose = () => setOpen(false);
+
   return (
     <div>
       <Header />
@@ -42,48 +45,23 @@ const Home = () => {
       </header>
       <main>
         {/* <!-- Featured Sneakers --> */}
-        <div className="featured-sneakers">
-          {imgData.map((data, index) => {
-            return (
-              <div key={index}>
-                <img
-                  style={{
-                    width: "100%",
-                    borderRadius: "10px",
-                    height: "280px",
-                  }}
-                  src={data.img}
-                  alt="featured"
-                />
-              </div>
-            );
-          })}
-        </div>
+        <Products />
         <Box
           sx={{
             width: 150,
             marginX: "auto",
             mb: 4,
           }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{
-              fontWeight: "bold",
-            }}
-          >
-            Load More...
-          </Button>
-        </Box>
+        ></Box>
       </main>
 
       <div className="featured-container">
         <p>Contact us</p>
         <div className="featured-item">
           <img
+            className="fetatred-img"
             style={{
-              width: "50%",
+              // width: "50%",
               height: "450px",
               borderRadius: "10px",
             }}
@@ -100,7 +78,7 @@ const Home = () => {
             </h2>
             <p>Be the first to know about the latest drops.</p>
 
-            <form>
+            <Box component="form" onSubmit={handleOpen}>
               <Box
                 sx={{
                   display: "flex",
@@ -108,14 +86,19 @@ const Home = () => {
                 }}
               >
                 <TextField
+                  // required
                   id="outlined-basic"
                   label="Name"
                   variant="outlined"
+                  name="name"
                 />
                 <TextField
+                  // required
                   id="outlined-basic"
                   label="Email"
                   variant="outlined"
+                  type={"email"}
+                  name="email"
                 />
               </Box>
               <Box
@@ -124,16 +107,20 @@ const Home = () => {
                 }}
               >
                 <TextField
+                  // required
                   id="outlined-basic"
                   label="Subject"
                   variant="outlined"
+                  name="subject"
                   sx={{
                     width: 1,
                   }}
                 />
                 <Textarea
+                  // required
                   placeholder="Your Message…"
                   minRows={5}
+                  name="message"
                   variant="outlined"
                   sx={{
                     border: "1px solid #ccc",
@@ -142,6 +129,8 @@ const Home = () => {
                 />
               </Box>
               <Button
+                type="submit"
+                // onClick={handleOpen}
                 variant="contained"
                 sx={{
                   mt: 3,
@@ -150,7 +139,27 @@ const Home = () => {
               >
                 Submit
               </Button>
-            </form>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography
+                    id="modal-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Your Information was
+                  </Typography>
+                  <hr />
+                  <Typography id="modal-modal-description" sx={{ mt: 3 }}>
+                    Submitted Successfully
+                  </Typography>
+                </Box>
+              </Modal>
+            </Box>
           </div>
         </div>
       </div>
