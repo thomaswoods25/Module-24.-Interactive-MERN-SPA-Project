@@ -1,49 +1,80 @@
 .main-header {
-    background-color: #f3f3f3;
-    margin-bottom: 20px;
-    text-align: center;
+  background-color: #f3f3f3;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.main-header h1 {
+  padding: 30px 0px;
+  margin: 0 auto;
+  color: #3d3434;
+}
+.featured-sneakers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 20px 60px;
+}
+.pagination {
+  text-align: center;
+}
+.featured-container {
+  margin: 20px 40px;
+}
+.featured-item {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.featured-container > p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.product-details-main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.fetatred-img {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .popular {
+    font-size: 25px;
   }
-  .main-header h1 {
-    padding: 30px 0px;
-    margin: 0 auto;
-    color: #3d3434;
-  }
+}
+@media screen and (max-width: 920px) {
   .featured-sneakers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 20px 40px;
+    margin: 20px;
   }
-  .featured-container {
-    margin: 20px 40px;
+}
+@media screen and (max-width: 768px) {
+  .product-details-main {
+    margin: 0 20px;
+  }
+  .main-content {
+    padding: 0 20px;
+  }
+  .popular {
+    font-size: 12px;
+  }
+  .FullName {
+    font-size: 14px !important;
   }
   .featured-item {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    flex-direction: column;
   }
-  .featured-container > p {
-    text-align: center;
-    margin-bottom: 20px;
+  .fetatred-img {
+    width: 100%;
   }
-  .product-details-main {
-    max-width: 800px;
-    margin: 0 auto;
+}
+@media screen and (min-width: 580px) and (max-width: 768px) {
+  .featured-sneakers {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
   }
-  @media screen and (max-width: 580px) {
-    .featured-sneakers {
-      grid-template-columns: repeat(1, 1fr);
-    }
+}
+@media screen and (max-width: 580px) {
+  .featured-sneakers {
+    grid-template-columns: repeat(1, 1fr);
   }
-  @media screen and (min-width: 580px) and (max-width: 768px) {
-    .featured-sneakers {
-      grid-template-columns: repeat(2, 1fr);
-      margin: 20px;
-    }
-  }
-  @media screen and (max-width: 920px) {
-    .featured-sneakers {
-      margin: 20px;
-    }
-  }
-  
+}
