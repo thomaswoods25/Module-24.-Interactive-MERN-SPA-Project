@@ -1,0 +1,8 @@
+20220921	13:01:06	a1c134b1-bd14-48c0-b8ff-b88cc30008de	MongoServerError: user is not allowed to do action [find] on [MERN-SPA-Project.products]	GET	/api/products	undefined
+20220921	13:06:38	8c271a26-f527-4c99-9f05-6c20b56e3e35	MongoServerError: user is not allowed to do action [find] on [MERN-SPA-Project.products]	GET	/api/products	undefined
+20220921	13:09:02	849dbfbc-2d33-4eea-a5f1-86d885102a01	MongoServerError: user is not allowed to do action [find] on [MERN-SPA-Project.products]	GET	/api/products	undefined
+20220921	13:09:17	80a0fc0b-ae03-44df-90ce-5eb23ba171eb	MongoServerError: user is not allowed to do action [find] on [MERN-SPA-Project.products]	GET	/api/products	undefined
+20220921	13:09:24	b72f6136-fd6e-44a4-9af6-67680b8e0767	MongoServerError: user is not allowed to do action [find] on [MERN-SPA-Project.products]	GET	/api/products	undefined
+20220921	13:42:57	82adb3e1-33dc-48a9-ab62-a904fd8defc6	MongoServerError: user is not allowed to do action [find] on [test.products]	GET	/api/products	undefined
+20220921	13:43:11	64109ad1-d054-4caa-a3ae-2c3afae8e474	MongoServerError: user is not allowed to do action [find] on [test.products]	GET	/api/products	undefined
+20220921	13:55:21	6c4f5b81-b194-4cdf-ac17-0a9f92a12e11	MongoServerError: user is not allowed to do action [find] on [mernproject.products]	GET	/api/products	undefined
