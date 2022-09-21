@@ -1,18 +1,10 @@
 import React from 'react';
-import { Typography,Box } from '@mui/material';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <Box sx={{
-            backgroundColor: '#F3F3F3',
-            py: 3,
-            textAlign: 'center',
-        }}>
-        <Typography variant="body">
-          @2022 - All rights reserved by Sneaker Seeker.
-        </Typography>
-        </Box>
+        <footer className="footer">
+        <p>@2022 - All rights reserved by Sneaker Seeker.</p>
+        </footer>
     );
 };
-
-export default Footer;
