@@ -3,7 +3,6 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
-const { logger, logEvents } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -20,7 +19,6 @@ const commentRoute = require("./routes/commentRoute");
 connectDB();
 
 // Application use Middleware
-app.use(logger);
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
