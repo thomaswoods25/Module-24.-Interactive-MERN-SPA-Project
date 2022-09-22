@@ -15,7 +15,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+ 
 function Copyright(props) {
   return (
     <Typography
@@ -40,16 +40,16 @@ function Copyright(props) {
     </Typography>
   );
 }
-
+ 
 const theme = createTheme();
-
+ 
 export default function SignIn() {
   const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     axios
-      .post("https://sneaker-seekers.herokuapp.com/api/users/signin", {
+      .post("https://mern-sneaker-project.herokuapp.com/api/users/signin", {
         email: data.get("email"),
         password: data.get("password"),
       })
@@ -59,7 +59,7 @@ export default function SignIn() {
         navigate("/");
       });
   };
-
+ 
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">

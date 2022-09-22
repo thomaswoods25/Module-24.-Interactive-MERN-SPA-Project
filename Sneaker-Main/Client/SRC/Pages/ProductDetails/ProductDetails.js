@@ -7,20 +7,20 @@ import { Button, Dialog, DialogTitle, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { green, blue } from "@mui/material/colors";
-
+ 
 const ProductDetails = () => {
   const { productId } = useParams();
   const [comment, setComment] = React.useState("");
-
+ 
   const [allProducts, setAllProducts] = React.useState([]);
   const [open, setOpen] = React.useState(false);
   const [comments, setComments] = React.useState([]);
-
+ 
   const handleClose = () => {
     setOpen(false);
   };
   useEffect(() => {
-    fetch(`heroku link`)
+    fetch(`https://mern-sneaker-project.herokuapp.com/api/products`)
       .then((res) => res.json())
       .then((json) => {
         setAllProducts(json?.allProducts);
@@ -29,14 +29,14 @@ const ProductDetails = () => {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   // const token = JSON.parse(localStorage.getItem("token"));
   const token = localStorage.getItem("token");
-
+ 
   const product = allProducts?.find((pd) => pd?._id === productId);
-
+ 
   const handleComment = () => {
     // send comment to database
     axios
       .post(
-        "heroku comment link",
+        "https://mern-sneaker-project.herokuapp.com/api/comment",
         {
           comment,
           productId,
@@ -55,25 +55,25 @@ const ProductDetails = () => {
         setComment("");
         axios
           .get(
-            `heroku product link`
+            `https://mern-sneaker-project.herokuapp.com/api/comment/single?productId=${productId}`
           )
           .then((res) => {
             setComments(res.data?.data);
           });
       });
   };
-
+ 
   useEffect(() => {
     // get all the comments from database for specific product
     axios
       .get(
-        `heroku product link`
+        `https://mern-sneaker-project.herokuapp.com/api/comment/single?productId=${productId}`
       )
       .then((res) => {
         setComments(res.data?.data);
       });
   }, [productId]);
-
+ 
   return (
     <div>
       <Header />
@@ -109,8 +109,20 @@ const ProductDetails = () => {
             </span>{" "}
           </p>
           <p>Brand : {product?.brand}</p>
-          {product?.description && <p>Descriptions :{product?.description}</p>}
-          {(product?.description === "" || undefined || null || "\n") && (
+          {product?.description ? (
+            <p>Descriptions : {product?.description}</p>
+          ) : (
+            <p>
+              Descriptions: A monochromatic Onyx hue envelops the latest Yeezy
+              Boost 350 V2, the lifestyle runner from adidas and Kanye West. The
+              upper features a dark black Primeknit weave along with rope laces,
+              while a post-dyed monofilament side stripe can be found in a
+              lighter black shade. A full-length Boost unit is encapsulated in a
+              semi-translucent ribbed TPU midsole, while a black rubber outsole
+              rounds out the look.
+            </p>
+          )}
+          {/* {(product?.description === "" || undefined || null || "\n") && (
             <p>
               Descriptions : A monochromatic Onyx hue envelops the latest Yeezy
               Boost 350 V2, the lifestyle runner from adidas and Kanye West. The
@@ -120,7 +132,7 @@ const ProductDetails = () => {
               semi-translucent ribbed TPU midsole, while a black rubber outsole
               rounds out the look.
             </p>
-          )}
+          )} */}
           <div
             style={{
               marginTop: "20px",
@@ -229,5 +241,5 @@ const ProductDetails = () => {
     </div>
   );
 };
-
+ 
 export default ProductDetails;

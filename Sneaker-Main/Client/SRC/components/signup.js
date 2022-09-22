@@ -14,7 +14,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+ 
 function Copyright(props) {
   return (
     <Typography
@@ -32,26 +32,26 @@ function Copyright(props) {
     </Typography>
   );
 }
-
+ 
 const theme = createTheme();
-
+ 
 export default function SignUp() {
   const [errorMessage, setErrorMessage] = React.useState(false);
-
+ 
   const [avatar, setAvatar] = React.useState("");
   const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     //post img to imgbb
-
+ 
     if (avatar) {
       let formData = new FormData();
       formData.append("image", avatar);
       formData.append("key", `c8818fe821c0aee81ebf0b77344f0e2b`);
-      axios.post("img link", formData).then((res) => {
+      axios.post("https://api.imgbb.com/1/upload", formData).then((res) => {
         const imgURL = res.data.data.url;
         axios
-          .post("heroku link", {
+          .post("https://mern-sneaker-project.herokuapp.com/api/users", {
             fullname:
               event.target.firstName.value + " " + event.target.lastName.value,
             email: event.target.email.value,
@@ -65,7 +65,7 @@ export default function SignUp() {
       });
     } else {
       axios
-        .post("heroku link", {
+        .post("https://mern-sneaker-project.herokuapp.com/api/users", {
           fullname:
             event.target.firstName.value + " " + event.target.lastName.value,
           email: event.target.email.value,
@@ -81,7 +81,7 @@ export default function SignUp() {
         });
     }
   };
-
+ 
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -226,3 +226,4 @@ export default function SignUp() {
     </ThemeProvider>
   );
 }
+ 
