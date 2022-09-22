@@ -2,20 +2,20 @@ import { Button } from "@mui/material";
 import React, { useEffect } from "react";
 import { red } from "@mui/material/colors";
 import { Link } from "react-router-dom";
-
+ 
 const color = (value) => {
   return red[value];
 };
-
+ 
 export default function Products() {
   const [products, setProducts] = React.useState([]);
   const [count, setCount] = React.useState(0);
   const [page, setPage] = React.useState(0);
   const pageSize = 9;
-
+ 
   useEffect(() => {
     fetch(
-      `heroku link here ***EDIT***`
+      `https://mern-sneaker-project.herokuapp.com/api/products?limit=${pageSize}&page=${page}`
     )
       .then((res) => res.json())
       .then((json) => {
@@ -87,7 +87,7 @@ export default function Products() {
               width: "40px",
               margin: "5px",
               backgroundColor: number === page ? color(300) : color(500),
-
+ 
               "&:hover": {
                 backgroundColor: color(400),
               },
