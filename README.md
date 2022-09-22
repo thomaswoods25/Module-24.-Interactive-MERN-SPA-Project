@@ -6,7 +6,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/">
+  <a href="https://sneaker-seekers.netlify.app/">
    
   </a>
 
