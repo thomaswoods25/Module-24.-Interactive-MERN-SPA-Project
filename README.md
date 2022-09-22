@@ -12,6 +12,8 @@
 
 <h3 align="center">Sneaker Seekers</h3>
 
+![Screenshot 2022-09-20 203227](https://user-images.githubusercontent.com/103224098/191849870-a1032b67-8516-4ce7-9ed9-89c45e677a57.png)
+
   <p align="center">
     Sneaker Seeks is a fully interactive MERN SPA Application that allows for users to find sneakers by release, comment, and save those sneakers to view in the future.
     <br />
@@ -120,7 +122,7 @@ Interactive and full stack web application, catered to those who love sneakers.
    ```sh
    npm install
    ```
-
+   npm run build
    ```
 
 <p align="right"><a href="#top">back to top</a></p>
@@ -170,9 +172,9 @@ Keon Mebane - jkmebane@gmail.com
 
 Veronica Person - 
 
-[Deployed Application]()
+[Deployed Application](https://sneaker-seekers.netlify.app/)
 
-[Project Link]()
+[Project Link](https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/`)
 
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -186,8 +188,8 @@ Distributed under the ISC License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/badge/Module-24.-Interactive-MERN-SPA-Project%20Contributors-brightgreen
-[contributors-url]: https://github.com/nmsiegel1/Module-24.-Interactive-MERN-SPA-Project/graphs/contributors
-[issues-shield]: https://img.shields.io/badge/Sip%20Happens-View%20Issues-red
+[contributors-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/Module-24.-Interactive-MERN-SPA-Project%20Issues-red
 [issues-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues
 [license-shield]: https://img.shields.io/badge/license-ISC-green
 [license-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/blob/Readme/LICENSE.txt
