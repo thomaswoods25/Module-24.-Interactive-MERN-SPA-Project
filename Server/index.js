@@ -3,7 +3,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
-const errorHandler = require("./middleware/errorHandler");
+// const errorHandler = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
@@ -45,7 +45,7 @@ app.use("/api/comment", commentRoute);
 //   }
 // });
 
-app.use(errorHandler);
+// app.use(errorHandler);
 
 mongoose.connection.once("open", () => {
   console.log(`Connected to Server!`);
