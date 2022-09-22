@@ -35,10 +35,4 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-// productSchema.plugin(AutoIncrement, {
-//   inc_field: "product",
-//   id: "productNums",
-//   start_seq: 500,
-// });
-
 module.exports = mongoose.model("Product", productSchema);
