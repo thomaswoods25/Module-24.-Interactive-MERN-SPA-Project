@@ -16,7 +16,6 @@ Heroku
 
 
 ## INTERACTIVE MERN SPA PROJECT
-
 This project will be your best opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job. That’s why one of the requirements for this project is that you add it to your portfolio
 
 ## Project Requirements
