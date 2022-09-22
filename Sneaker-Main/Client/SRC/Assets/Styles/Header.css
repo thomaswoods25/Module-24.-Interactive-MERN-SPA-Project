@@ -1,16 +1,25 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-}
-.link-div{
+  }
+  .link-div {
     display: flex;
     gap: 5px;
     align-items: center;
-}
-.link{
+    padding: 0;
+  }
+  .link {
     text-decoration: none;
-    color: #544D4D;
-
-}
+    color: #544d4d;
+  }
+  @media screen and (max-width: 768px) {
+    .header {
+      padding: 0 10px;
+    }
+    .popular {
+      display: none;
+    }
+  }
+  
