@@ -19,10 +19,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
   });
 });
 
-/* ============DONE========= */
-// @desc Create new user
-// @route POST /users
-// @access Private
+
 const createNewUser = asyncHandler(async (req, res) => {
   const { email, password, fullname, avatar } = req.body;
   if (!email || !password || !fullname) {
@@ -52,16 +49,9 @@ const createNewUser = asyncHandler(async (req, res) => {
   }
 });
 
-/* ============PROCESSING========= */
-// @desc Update a User
-// @route PATCH /users
-// @access Private
 const updateUser = asyncHandler(async (req, res) => {});
 
-/* ============DONE========= */
-// @desc Delete a user
-// @route DELETE /users
-// @access Private
+
 const deleteUser = asyncHandler(async (req, res) => {
   const { id } = req.body;
   if (!id) {
@@ -102,6 +92,7 @@ const loginHandle = async (req, res) => {
     if (userLogging) {
       const isMatch = await bcrypt.compare(password, userLogging.password);
       // token = await userLogging.generateAuthToken();
+      
       if (!isMatch) {
         res.status(400).json({ error: "Invalid Credientials" });
       } else {

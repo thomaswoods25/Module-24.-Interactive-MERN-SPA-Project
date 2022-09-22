@@ -1,10 +1,7 @@
 const Product = require("../models/Product");
 const asyncHandler = require("express-async-handler");
 const { Cursor } = require("mongoose");
-/* ============DONE========= */
-// @desc Get all users
-// @route GET /users
-// @access Private
+
 const getAllProduct = asyncHandler(async (req, res) => {
   const count = await Product.countDocuments({});
   const page = req.query.page;
@@ -28,10 +25,7 @@ const getAllProduct = asyncHandler(async (req, res) => {
   });
 });
 
-/* ============DONE========= */
-// @desc Create new user
-// @route POST /users
-// @access Private
+
 const getSingleProduct = asyncHandler(async (req, res) => {
   console.log(req.body.id);
   const data = await Product.findById(req.body.id);
@@ -66,16 +60,8 @@ const createNewProduct = asyncHandler(async (req, res) => {
   }
 });
 
-/* ============PROCESSING========= */
-// @desc Update a User
-// @route PATCH /users
-// @access Private
 const updateProduct = asyncHandler(async (req, res) => {});
 
-/* ============DONE========= */
-// @desc Delete a user
-// @route DELETE /users
-// @access Private
 const deleteProduct = asyncHandler(async (req, res) => {
   const product = await Product.findByIdAndDelete({ _id: req.params.id });
   if (!product) {
