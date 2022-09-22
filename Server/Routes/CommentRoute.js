@@ -50,5 +50,3 @@ comment.get("/single", async (req, res) => {
   }
 });
 module.exports = comment;
-// ok
-// ok
