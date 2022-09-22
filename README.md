@@ -122,6 +122,7 @@ Interactive and full stack web application, catered to those who love sneakers.
    ```sh
    npm install
    ```
+    ```sh
    npm run build
    ```
 
