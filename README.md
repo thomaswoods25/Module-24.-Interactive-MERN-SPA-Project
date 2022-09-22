@@ -1,137 +1,195 @@
 ## Sneaker Seeker
-
-## Overview 
-In this project, we will integrate React as the View layer into a full-stack web application using the MVC paradigm and deploy it to Heroku. The stack we will work with is known as MERN, short for MongoDB Express React and Node. This project complies a vast amount of technologies used. We give our user interfaces of all users the access to a sneaker API database that has been linked to MongoDB. There launched to heroku forming our finished and completed website. Our website gives users the ability to sign up for an account, sign in, sign out, click on shoes, read the description of each specific shoes, comment on a specific shoe and comment on the website page as a whole. This gives users who are shoe lovers aka "sneaker heads" a community of sneaker advocates sharing their interest and knowledge about sneakers.
-
-## Technologies Used
-HTML
-CSS
-JavaScript
-JSON
-React
-Node
-Logs
-MongoDB
-Heroku
+[![Contributors][contributors-shield]][contributors-url][![Issues][issues-shield]][issues-url][![License][license-shield]](./LICENSE.txt)
 
 
-## INTERACTIVE MERN SPA PROJECT
-This project will be your best opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job. That’s why one of the requirements for this project is that you add it to your portfolio
 
-## Project Requirements
-Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on user demand. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill some specific requirements.
+<br />
+<div align="center">
+  <a href="https://sneaker-seekers.netlify.app/">
+   
+  </a>
 
-Your project should fulfill the following requirements:
+<h3 align="center">Sneaker Seekers</h3>
 
-Use React for the front end.
+![Screenshot 2022-09-20 203227](https://user-images.githubusercontent.com/103224098/191849870-a1032b67-8516-4ce7-9ed9-89c45e677a57.png)
 
-Use GraphQL with a Node.js and Express.js server.
-
-Use MongoDB and the Mongoose ODM for the database.
-
-Use queries and mutations for retrieving, adding, updating, and deleting data.
-
-Be deployed using Heroku (with data).
-
-Have a polished UI.
-
-Be responsive.
-
-Be interactive (i.e., accept and respond to user input).
-
-Include authentication (JWT).
-
-Protect sensitive API key information on the server.
-
-Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, quality comments, etc.).
-
-Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-Finally, you must add your project to the portfolio that you created in Module 20.
-
-You should also consider the following suggestions to help your project stand out:
-
-## CSS Styling
-Instead of using a CSS library like Bootstrap, consider one of the following suggestions:
-
-Look into the concept of CSS-in-JS, which abstracts CSS to the component level, using JavaScript to describe styles in a declarative and maintainable way. Some popular libraries include styled-components (Links to an external site.) and Emotion (Links to an external site.).
-
-Try using a component library, such as Semantic UI (Links to an external site.), Chakra UI (Links to an external site.), or Ant Design (Links to an external site.).
-
-Create all the CSS for your application just using CSS.
-
-Ultimately, it doesn't matter which of these options you choose— it just needs to look professional and be mobile-friendly.
-
-## Payment Platform
-Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce platform, you could set up your site to accept charitable donations.
-
-## Bonus
-Although this is not a requirement for your project, see if you can also implement functionality to meet the minimum requirements of a PWA:
-
-Uses a web manifest
-
-Uses a service worker for offline functionality
-
-Is installable
+  <p align="center">
+    Sneaker Seeks is a fully interactive MERN SPA Application that allows for users to find sneakers by release, comment, and save those sneakers to view in the future.
+    <br />
+    <br />
+    <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://sneaker-seekers.netlify.app/">Deployed Application</a>
+    ·
+    <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/">Request Feature</a>
+  </p>
+</div>
 
 
-## Grading Requirements
 
-## Technical Acceptance Criteria: 25%
-Satisfies the following code requirements:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact-the-contributors">Contact</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-Application uses React for the front end.
 
-Application has a GraphQL API with a Node.js and Express.js server and uses queries and mutations for retrieving, adding, updating, and deleting data.
+## About The Project
+<h3 align="center">Sneaker Seekers!</h3>
 
-Application uses MongoDB and the Mongoose ODM for the database and protects sensitive API key information on the server.
 
-Application includes user authentication using JWT.
 
-## Concept 10%
-Application should be a unique and novel idea.
+Interactive and full stack web application, catered to those who love sneakers. 
+<br/>
 
-Your group should clearly and concisely articulate your project idea.
 
-## Deployment: 20%
-Application deployed at live URL on Heroku and loads with no errors.
 
-Application GitHub URL submitted.
 
-Portfolio at live URL submitted, featuring project.
+<p align="right"><a href="#top">back to top</a></p>
 
-## Repository Quality: 10%
-Repository has a unique name.
 
-Repository follows best practices for file structure and naming conventions.
 
-Repository follows best practices for class and id naming conventions, indentation, quality comments, etc.
+### Built With
 
-Repository contains multiple descriptive commit messages.
+* [Node.js](https://nodejs.org/en/)
+* [Reactjs](https://reactjs.org/)
+* [MongoDbAtlas](https://www.mongodb.com/)
+* [Handlebars](https://handlebarsjs.com/)
+* [MySQL](https://www.mysql.com/)
+* [Pixiejs](https://pixijs.com/)
+* [Express Session / Connect Session Sequelize](https://pixijs.com/)
+* [ES6](https://pixijs.com/)
+* [ExpressJs](https://expressjs.com/)
+* [Typed.js](https://mattboldt.github.io/typed.js/)
 
-Repository contains high-quality README file with description, screenshot, and link to deployed application.
+#### Addtional Tools
 
-## Application Quality: 15%
-Application user experience is intuitive and easy to navigate.
+* [Insomnia](https://eslint.org/)
+* [bcrypt](https://eslint.org/)
+* [dotenv](https://eslint.org/)
+* [ESLint](https://eslint.org/)
+* [Prettier](https://eslint.org/)
 
-Application user interface style is clean and polished.
 
-Application is responsive.
 
-## Presentation 10%
-Your group should present using Google Slides, Powerpoint, or a similar presentation software.
 
-Every group member should speak during the presentation.
 
-Your presentation should follow the Project Presentation Template (Links to an external site.).
 
-## Collaboration 10%
-There are no major disparities in the number of GitHub contributions between group members.
-Bonus
-Fulfilling all three of the following requirements to turn your app into a PWA will add 10 points to your grade. Note that the highest grade you can achieve is still a 100:
 
-Uses a web manifest
+<p align="right"><a href="#top">back to top</a></p>
 
-Uses a service worker for offline functionality
 
-Is installable
+
+
+## Getting Started
+
+### Prerequisites
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+    ```sh
+   npm run build
+   ```
+
+<p align="right"><a href="#top">back to top</a></p>
+
+
+## Usage
+
+
+.
+<br/>
+<br/>
+
+![Screenshot 2022-09-20 203144](https://user-images.githubusercontent.com/103224098/191667524-a3f59ae1-9d1b-4fd7-9b89-11160d02b668.png)
+![Screenshot 2022-09-20 203227](https://user-images.githubusercontent.com/103224098/191667529-4963138a-e63f-4ef8-9303-0d0428881ce0.png)
+![Screenshot 2022-09-20 203354](https://user-images.githubusercontent.com/103224098/191667532-9289e76f-2c33-4a7f-9d4e-dd43a9fd7e2b.png)
+
+
+
+
+<p align="right"><a href="#top">back to top</a></p>
+
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right"><a href="#top">back to top</a></p>
+
+<!-- CONTACT -->
+### Contact the Contributors
+
+Thomas Woods - Thomaswoods25@protonmail.com
+
+Arum Melton - arumjmelton@gmail.com
+
+Keon Mebane - jkmebane@gmail.com
+
+Veronica Person - 
+
+[Deployed Application](https://sneaker-seekers.netlify.app/)
+
+[Project Link](https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/`)
+
+<p align="right"><a href="#top">back to top</a></p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the ISC License. See `LICENSE.txt` for more information.
+
+<p align="right"><a href="#top">back to top</a></p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/badge/SneakerSeekers%20Contributors-brightgreen
+[contributors-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/SneakerSeekers%20Issues-red
+[issues-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues
+[license-shield]: https://img.shields.io/badge/license-ISC-green
+ 
