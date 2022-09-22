@@ -167,7 +167,7 @@ Arum Melton - arumjmelton@gmail.com
 
 Keon Mebane - jkmebane@gmail.com
 
-Veronica Person - 
+Veronica Person - Veronicalperson@gmail.com
 
 [Deployed Application](https://sneaker-seekers.netlify.app/)
 
