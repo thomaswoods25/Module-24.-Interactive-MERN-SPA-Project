@@ -59,7 +59,7 @@
 
 
 
-Interactive and full stack web application, catered to those who love sneakers.
+Interactive and full stack web application, catered to those who love sneakers. 
 <br/>
 
 
