@@ -77,15 +77,12 @@ Interactive and full stack web application, catered to those who love sneakers.
 * [MongoDbAtlas](https://www.mongodb.com/)
 * [Handlebars](https://handlebarsjs.com/)
 * [MySQL](https://www.mysql.com/)
-* [Pixiejs](https://pixijs.com/)
-* [Express Session / Connect Session Sequelize](https://pixijs.com/)
 * [ES6](https://pixijs.com/)
 * [ExpressJs](https://expressjs.com/)
 * [Typed.js](https://mattboldt.github.io/typed.js/)
 
 #### Addtional Tools
 
-* [Insomnia](https://eslint.org/)
 * [bcrypt](https://eslint.org/)
 * [dotenv](https://eslint.org/)
 * [ESLint](https://eslint.org/)
