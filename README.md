@@ -21,11 +21,11 @@
     <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">Deployed Application</a>
+    <a href="https://sneaker-seekers.netlify.app/">Deployed Application</a>
     ·
-    <a href="">Report Bug</a>
+    <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues">Report Bug</a>
     ·
-    <a href="">Request Feature</a>
+    <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/">Request Feature</a>
   </p>
 </div>
 
