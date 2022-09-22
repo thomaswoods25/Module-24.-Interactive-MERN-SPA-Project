@@ -6,8 +6,8 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/nmsiegel1/Sip-Happens">
-    <img src="public/images/SipHappensLogo.png" alt="Logo" width="250" height="250">
+  <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/">
+   
   </a>
 
 <h3 align="center">Sneaker Seekers</h3>
@@ -16,7 +16,7 @@
     Sneaker Seeks is a fully interactive MERN SPA Application that allows for users to find sneakers by release, comment, and save those sneakers to view in the future.
     <br />
     <br />
-    <a href="https://github.com/nmsiegel1/Sip-Happens"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="">Deployed Application</a>
@@ -75,7 +75,6 @@ Interactive and full stack web application, catered to those who love sneakers.
 * [Reactjs](https://reactjs.org/)
 * [MongoDbAtlas](https://www.mongodb.com/)
 * [Handlebars](https://handlebarsjs.com/)
-* [Sequelize](https://sequelize.org/)
 * [MySQL](https://www.mysql.com/)
 * [Pixiejs](https://pixijs.com/)
 * [Express Session / Connect Session Sequelize](https://pixijs.com/)
@@ -115,15 +114,13 @@ Interactive and full stack web application, catered to those who love sneakers.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/nmsiegel1/Sip-Happens
+   git clone https://thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-3. Enter source into mySQL shell.
-   ```js
-    'db/schema.sql'
+
    ```
 
 <p align="right"><a href="#top">back to top</a></p>
@@ -132,14 +129,14 @@ Interactive and full stack web application, catered to those who love sneakers.
 ## Usage
 
 
-Once the user is successfully signed up or logged in, the application directs them to the home page that will suggest features and present to them a link to 'Vivino' if they wish to purchase . If the user selects 'Wines', they are then redirected to 12 different categories of wine to choose from. Once selected, the user is presented with information based on their selection. The user is then able to comment on the pairings, as well as upvote their favorite combinations.
+.
 <br/>
 <br/>
 
-![SipHappensScreenshot](/public/images/Demo/LoginDemo.png)
-![SipHappensScreenshot](/public/images/Demo/DemoCats.png)
-![SipHappensScreenshot](/public/images/Demo/DemoPair.png)
-![SipHappensScreenshot](/public/images/Demo/DemoComments.png)
+![Screenshot 2022-09-20 203144](https://user-images.githubusercontent.com/103224098/191667524-a3f59ae1-9d1b-4fd7-9b89-11160d02b668.png)
+![Screenshot 2022-09-20 203227](https://user-images.githubusercontent.com/103224098/191667529-4963138a-e63f-4ef8-9303-0d0428881ce0.png)
+![Screenshot 2022-09-20 203354](https://user-images.githubusercontent.com/103224098/191667532-9289e76f-2c33-4a7f-9d4e-dd43a9fd7e2b.png)
+
 
 
 
@@ -165,17 +162,17 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ### Contact the Contributors
 
-Andrew Byrd - andrew.byrds2@gmail.com
+Thomas Woods - Thomaswoods25@protonmail.com
 
 Arum Melton - arumjmelton@gmail.com
 
-Mtende Roll - rollmtende@gmail.com
+Keon Mebane - jkmebane@gmail.com
 
-Nina Siegel - siegel.nina.m@gmail.com
+Veronica Person - 
 
-[Deployed Application](https://sip-happens-unc.herokuapp.com/)
+[Deployed Application]()
 
-[Project Link](https://github.com/nmsiegel1/Sip-Happens)
+[Project Link]()
 
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -188,9 +185,9 @@ Distributed under the ISC License. See `LICENSE.txt` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/badge/Sip%20Happens-View%20Contributors-brightgreen
-[contributors-url]: https://github.com/nmsiegel1/Sip-Happens/graphs/contributors
+[contributors-shield]: https://img.shields.io/badge/Module-24.-Interactive-MERN-SPA-Project%20Contributors-brightgreen
+[contributors-url]: https://github.com/nmsiegel1/Module-24.-Interactive-MERN-SPA-Project/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/Sip%20Happens-View%20Issues-red
-[issues-url]: https://github.com/nmsiegel1/Sip-Happens/issues
+[issues-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues
 [license-shield]: https://img.shields.io/badge/license-ISC-green
-[license-url]: https://github.com/nmsiegel1/Sip-Happens/blob/Readme/LICENSE.txt
+[license-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/blob/Readme/LICENSE.txt
