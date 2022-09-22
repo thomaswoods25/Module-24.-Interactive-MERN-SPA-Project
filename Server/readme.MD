@@ -1,3 +1,19 @@
+## Sneaker Seeker
+
+## Overview 
+In this project, we will integrate React as the View layer into a full-stack web application using the MVC paradigm and deploy it to Heroku. The stack we will work with is known as MERN, short for MongoDB Express React and Node. This project complies a vast amount of technologies used. We give our user interfaces of all users the access to a sneaker API database that has been linked to MongoDB. There launched to heroku forming our finished and completed website. Our website gives users the ability to sign up for an account, sign in, sign out, click on shoes, read the description of each specific shoes, comment on a specific shoe and comment on the website page as a whole. This gives users who are shoe lovers aka "sneaker heads" a community of sneaker advocates sharing their interest and knowledge about sneakers.
+
+## Technologies Used
+HTML
+CSS
+JavaScript
+JSON
+React
+Node
+Logs
+MongoDB
+Heroku
+
 ## INTERACTIVE MERN SPA PROJECT
 
 This project will be your best opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job. That’s why one of the requirements for this project is that you add it to your portfolio
