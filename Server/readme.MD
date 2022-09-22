@@ -4,15 +4,20 @@
 In this project, we will integrate React as the View layer into a full-stack web application using the MVC paradigm and deploy it to Heroku. The stack we will work with is known as MERN, short for MongoDB Express React and Node. This project complies a vast amount of technologies used. We give our user interfaces of all users the access to a sneaker API database that has been linked to MongoDB. There launched to heroku forming our finished and completed website. Our website gives users the ability to sign up for an account, sign in, sign out, click on shoes, read the description of each specific shoes, comment on a specific shoe and comment on the website page as a whole. This gives users who are shoe lovers aka "sneaker heads" a community of sneaker advocates sharing their interest and knowledge about sneakers.
 
 ## Technologies Used
+
 HTML
 CSS
 JavaScript
 JSON
 React
 Node
+Express
 Logs
+Axios
 MongoDB
 Heroku
+RestAPI
+MIU Styling 
 
 ## INTERACTIVE MERN SPA PROJECT
 
@@ -149,5 +154,7 @@ Thomas Woods: https://github.com/thomaswoods25
 Arum Melton: https://github.com/ArumMelton
 Keon: https://github.com/jkmebane
 Veronica Person: https://github.com/veronicaperson
+
+## Screenshots
 
 
