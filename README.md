@@ -193,3 +193,4 @@ Distributed under the ISC License. See `LICENSE.txt` for more information.
 [issues-shield]: https://img.shields.io/badge/SneakerSeekers%20Issues-red
 [issues-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues
 [license-shield]: https://img.shields.io/badge/license-ISC-green
+ 
