@@ -13,7 +13,7 @@ React
 Node
 Express
 Logs
-Axios
+Axios (fetching for database)
 MongoDB
 Heroku
 RestAPI
