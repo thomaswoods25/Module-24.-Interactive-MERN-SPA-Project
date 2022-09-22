@@ -187,9 +187,8 @@ Distributed under the ISC License. See `LICENSE.txt` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/badge/Module-24.-Interactive-MERN-SPA-Project%20Contributors-brightgreen
+[contributors-shield]: https://img.shields.io/badge/SneakerSeekers%20Contributors-brightgreen
 [contributors-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/graphs/contributors
-[issues-shield]: https://img.shields.io/badge/Module-24.-Interactive-MERN-SPA-Project%20Issues-red
+[issues-shield]: https://img.shields.io/badge/SneakerSeekers%20Issues-red
 [issues-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/issues
 [license-shield]: https://img.shields.io/badge/license-ISC-green
-[license-url]: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project/blob/Readme/LICENSE.txt
