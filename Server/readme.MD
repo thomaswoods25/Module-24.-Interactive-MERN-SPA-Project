@@ -135,3 +135,19 @@ Uses a web manifest
 Uses a service worker for offline functionality
 
 Is installable
+
+## Github Repository
+
+Main Folder: https://github.com/thomaswoods25/Module-24.-Interactive-MERN-SPA-Project
+Server: https://github.com/thomaswoods25/Sneaker-Seeker-Server
+Project URL: https://sneaker-seekers.netlify.app/
+
+
+## Group Members:
+
+Thomas Woods: https://github.com/thomaswoods25
+Arum Melton: https://github.com/ArumMelton
+Keon: https://github.com/jkmebane
+Veronica Person: https://github.com/veronicaperson
+
+
